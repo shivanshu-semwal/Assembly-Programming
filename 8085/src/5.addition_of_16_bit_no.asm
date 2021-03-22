@@ -1,0 +1,14 @@
+// addition of two 16-bit no with carry
+
+MVI A 00H
+LHLD 3050H
+XCHG
+LHLD 3052H
+DAD D
+SHLD 3060
+ADC A
+STA 3062H
+HLT
+
+# ORG 3050
+# DB 32,31,21,31
